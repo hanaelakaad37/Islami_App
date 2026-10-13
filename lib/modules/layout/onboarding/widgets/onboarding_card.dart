@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/theme/app_colors.dart';
 
 import '../../../../core/app_routes/app_routes_name.dart';
-import '../../../../lib/core/services/shared_preferences.dart';
+import '../../../../core/services/shared_preferences.dart';
 import '../onboarding_data.dart';
 
 class OnboardingCard extends StatefulWidget {

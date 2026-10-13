@@ -22,6 +22,9 @@ class $AssetsFilesGen {
 
   /// Directory path: assets/files/Suras
   $AssetsFilesSurasGen get suras => const $AssetsFilesSurasGen();
+
+  /// Directory path: assets/files/azkar
+  $AssetsFilesAzkarGen get azkar => const $AssetsFilesAzkarGen();
 }
 
 class $AssetsIconsGen {
@@ -103,6 +106,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/bearish.png
   AssetGenImage get bearish => const AssetGenImage('assets/images/bearish.png');
 
+  /// File path: assets/images/evening_azkar.png
+  AssetGenImage get eveningAzkar =>
+      const AssetGenImage('assets/images/evening_azkar.png');
+
   /// File path: assets/images/hadith_bg.png
   AssetGenImage get hadithBg =>
       const AssetGenImage('assets/images/hadith_bg.png');
@@ -140,6 +147,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/more_bg.png
   AssetGenImage get moreBg => const AssetGenImage('assets/images/more_bg.png');
 
+  /// File path: assets/images/morning_azkar.png
+  AssetGenImage get morningAzkar =>
+      const AssetGenImage('assets/images/morning_azkar.png');
+
+  /// File path: assets/images/pray_time.png
+  AssetGenImage get prayTime =>
+      const AssetGenImage('assets/images/pray_time.png');
+
   /// File path: assets/images/quran_bg.png
   AssetGenImage get quranBg =>
       const AssetGenImage('assets/images/quran_bg.png');
@@ -162,6 +177,10 @@ class $AssetsImagesGen {
   AssetGenImage get soundWave11 =>
       const AssetGenImage('assets/images/soundWave 1 (1).png');
 
+  /// File path: assets/images/timer_bg.png
+  AssetGenImage get timerBg =>
+      const AssetGenImage('assets/images/timer_bg.png');
+
   /// File path: assets/images/welcome.png
   AssetGenImage get welcome => const AssetGenImage('assets/images/welcome.png');
 
@@ -174,6 +193,7 @@ class $AssetsImagesGen {
     vector,
     background,
     bearish,
+    eveningAzkar,
     hadithBg,
     hadithLeftCorner,
     hadithRightCorner,
@@ -184,12 +204,15 @@ class $AssetsImagesGen {
     islami,
     kabba,
     moreBg,
+    morningAzkar,
+    prayTime,
     quranBg,
     radio,
     radioBg,
     reading,
     sebhaBg,
     soundWave11,
+    timerBg,
     welcome,
   ];
 }
@@ -866,9 +889,17 @@ class $AssetsFilesSurasGen {
   ];
 }
 
-class Assets {
-  const Assets._();
+class $AssetsFilesAzkarGen {
+  const $AssetsFilesAzkarGen();
 
+  /// File path: assets/files/azkar/azkar.json
+  String get azkar => 'assets/files/azkar/azkar.json';
+
+  /// List of all assets
+  List<String> get values => [azkar];
+}
+
+abstract final class Assets {
   static const $AssetsFilesGen files = $AssetsFilesGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();

@@ -1,10 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7ce95a-857e-47be-a31f-8c1fa3ee0f9b" name="Changes" comment="" />
+    <list default="true" id="5b7ce95a-857e-47be-a31f-8c1fa3ee0f9b" name="Changes" comment="Initial implementation of core features for the Islami App&#10;&#10;- Added a Splash screen and a multi-page Onboarding flow using PageView and SharedPreferences.&#10;- Implemented a main Layout view with Bottom Navigation for Quran, Hadith, Tasbeh, Radio, and Timer sections.&#10;- Developed the Quran module featuring a Sura list and a detailed view that loads verses from text assets.&#10;- Created the Hadith module using a Carousel slider to navigate through different Hadith files.&#10;- Implemented a Tasbeh section with a rotating Sebha animation and counter logic.&#10;- Added a Radio module with a tabbed interface for channels and reciters.&#10;- Established app infrastructure including a centralized router, custom theme manager, and color palette.&#10;- Configured asset and font generation using flutter_gen.&#10;- Integrated sura data and hadith text assets into the project.">
+      <change afterPath="$PROJECT_DIR$/assets/files/azkar/azkar.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/evening_azkar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/morning_azkar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/pray_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/timer_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/data_formatter/data_formatter.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/app_di.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/failures/faliure.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/failures/server_faliuer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/api_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/api_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/api_log_interceptors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/api_results.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/dio_api_client.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/endpoints.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/services/RecentSuraService .dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/services/audio_play_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/data/data_source/hadith_data_source_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/data/data_source/hadith_local_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/data/models/hadith_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/data/repository_imp/hadith_repository_imp.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/domain/entities/hadith_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/domain/repository/hadith_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/domain/use_case/get_hadith_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/hadith_di/hadith_di.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/manager/hadith_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/manager/hadith_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/manager/hadith_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/pages/hadith.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/data/data_source/local_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/data/data_source/sura_data_source_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/data/model/sura_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/data/repository_imp/quran_repository_imp.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/domain/entities/quran_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/domain/entities/sura_verses_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/domain/repository/quran_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/domain/use_case/quran_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/domain/use_case/sura_verses_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/manager/quran_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/manager/quran_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/manager/quran_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/quran/quran_di/quran_di.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/data/data_source/data_source_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/data/data_source/remote_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/data/models/radio_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/data/models/reciters_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/data/repository_imp/repository_imp.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/domain/entities/radio_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/domain/entities/reciters_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/domain/repository/radio_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/domain/use_cases/radio_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/domain/use_cases/reciters_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/radio_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/radio_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/radio_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/reciters_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/reciters_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/manager/reciters_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/radio/radio_di/radio_di.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/data_source/azkar_data_source_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/data_source/azkar_local_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/data_source/timer_data_source_interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/data_source/timer_remote_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/models/azkar_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/models/timer_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/data/repository_imp/timer_repository_imp.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/domain/entities/azkar_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/domain/entities/timer_entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/domain/repository/timer_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/domain/use_case/azkar_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/domain/use_case/timer_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/azkar_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/azkar_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/azkar_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/timer_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/timer_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/manager/timer_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/timer_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/azkar/azkar_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/azkar/azkar_list_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/azkar/evening_azkar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/azkar/morning_azkar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/timer/next_prayer_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/presentation/pages/widgets/timer/pray_time.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/modules/layout/timer/timer_di/timer_di.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/app_routes/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/app_routes/app_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/app_routes/app_routes_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/app_routes/app_routes_name.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/gen/assets.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/gen/assets.gen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/gen/fonts.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/gen/fonts.gen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/theme/app_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/theme/app_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lib/core/services/shared_preferences.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/services/shared_preferences.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/hadith_data_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/sura_data_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/hadith/hadith.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/hadith/hadith_background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/pages/hadith_background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/hadith/hadith_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/hadith/presentation/pages/hadith_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/layoutView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/layoutView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/onboarding/widgets/onboarding_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/onboarding/widgets/onboarding_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/quran/quran.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/pages/quran.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/quran/quran_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/pages/quran_details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/quran/widgets/quran_details_background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/pages/widgets/quran_details_background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/quran/widgets/sura_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/quran/presentation/pages/widgets/sura_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/radio/radio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/pages/radio.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/radio/radio_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/pages/widgets/radio_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/radio/radio_tab_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/pages/widgets/radio_tab_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/radio/reciters_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/radio/presenration/pages/widgets/reciters_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/splash/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/splash/splash.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/tasbeh/tasbeh.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/layout/tasbeh/tasbeh.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/layout/timer/timer_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,44 +133,79 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hanaelakaad37&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hanaelakaad37/Islami_App.git&quot;,
+    &quot;accountId&quot;: &quot;53536ba1-6122-4188-9215-ca17bca82cae&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3HbJksx7S1MUkSEmDSG8edOFsZi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.main.dart.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "io.flutter.project.isFirstOpen": "true",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/projects/islami_app",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;io.flutter.project.isFirstOpen&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/islami_app/lib/core&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;device.mirroring&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\islami_app\lib\core" />
       <recent name="D:\projects\islami_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\islami_app\android" />
+      <recent name="D:\projects\islami_app\lib\modules\layout\timer\presentation\pages\widgets\timer" />
+      <recent name="D:\projects\islami_app\lib\modules\layout\timer\presentation\pages\widgets\azkar" />
+      <recent name="D:\projects\islami_app\lib\modules\layout\hadith\presentation\pages" />
+      <recent name="D:\projects\islami_app\lib\modules\layout\timer\timer_di" />
+      <recent name="D:\projects\islami_app\lib\modules\layout\quran\presentation\pages" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +215,59 @@
       <option name="presentableId" value="Default" />
       <updated>1786130987235</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial implementation of core features for the Islami App&#10;&#10;- Added a Splash screen and a multi-page Onboarding flow using PageView and SharedPreferences.&#10;- Implemented a main Layout view with Bottom Navigation for Quran, Hadith, Tasbeh, Radio, and Timer sections.&#10;- Developed the Quran module featuring a Sura list and a detailed view that loads verses from text assets.&#10;- Created the Hadith module using a Carousel slider to navigate through different Hadith files.&#10;- Implemented a Tasbeh section with a rotating Sebha animation and counter logic.&#10;- Added a Radio module with a tabbed interface for channels and reciters.&#10;- Established app infrastructure including a centralized router, custom theme manager, and color palette.&#10;- Configured asset and font generation using flutter_gen.&#10;- Integrated sura data and hadith text assets into the project.">
+      <option name="closed" value="true" />
+      <created>1786132176971</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786132176971</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial implementation of core features for the Islami App&#10;&#10;- Added a Splash screen and a multi-page Onboarding flow using PageView and SharedPreferences.&#10;- Implemented a main Layout view with Bottom Navigation for Quran, Hadith, Tasbeh, Radio, and Timer sections.&#10;- Developed the Quran module featuring a Sura list and a detailed view that loads verses from text assets.&#10;- Created the Hadith module using a Carousel slider to navigate through different Hadith files.&#10;- Implemented a Tasbeh section with a rotating Sebha animation and counter logic.&#10;- Added a Radio module with a tabbed interface for channels and reciters.&#10;- Established app infrastructure including a centralized router, custom theme manager, and color palette.&#10;- Configured asset and font generation using flutter_gen.&#10;- Integrated sura data and hadith text assets into the project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of core features for the Islami App&#10;&#10;- Added a Splash screen and a multi-page Onboarding flow using PageView and SharedPreferences.&#10;- Implemented a main Layout view with Bottom Navigation for Quran, Hadith, Tasbeh, Radio, and Timer sections.&#10;- Developed the Quran module featuring a Sura list and a detailed view that loads verses from text assets.&#10;- Created the Hadith module using a Carousel slider to navigate through different Hadith files.&#10;- Implemented a Tasbeh section with a rotating Sebha animation and counter logic.&#10;- Added a Radio module with a tabbed interface for channels and reciters.&#10;- Established app infrastructure including a centralized router, custom theme manager, and color palette.&#10;- Configured asset and font generation using flutter_gen.&#10;- Integrated sura data and hadith text assets into the project." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/modules/layout/quran/data/data_source/local_data_source.dart</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/modules/layout/quran/presentation/manager/quran_bloc.dart</url>
+          <line>8</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/modules/layout/quran/presentation/manager/quran_event.dart</url>
+          <line>20</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/modules/layout/timer/data/data_source/timer_remote_data_source.dart</url>
+          <line>12</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -19,7 +19,6 @@ class _TasbehState extends State<Tasbeh> {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
     final theme = Theme.of(context);
     return Stack(
       children: [
@@ -52,7 +51,7 @@ class _TasbehState extends State<Tasbeh> {
                       angle += 0.32;
 
                       count++;
-                      if (count > 30) {
+                      if (count > 33) {
                         count = 0;
                         zkerIndex++;
                       }

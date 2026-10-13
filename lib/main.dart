@@ -3,12 +3,15 @@ import 'package:islami/core/theme/app_theme_manager.dart';
 
 import 'core/app_routes/app_router.dart';
 import 'core/app_routes/app_routes_name.dart';
-import 'lib/core/services/shared_preferences.dart';
+import 'core/di/app_di.dart';
+import 'core/services/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await SharedPrefService.init();
+  AppDi.init();
+
   runApp(const Islami());
 }
 

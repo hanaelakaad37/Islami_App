@@ -8,4 +8,6 @@ abstract class AppRoutesName {
   static const String radio = '/radio';
   static const String timerView = '/timer_view';
   static const String quranDetails = '/quran_details';
+  static const String morningAzkar = '/morning_azkar';
+  static const String eveningAzkar = '/evening_azkar';
 }

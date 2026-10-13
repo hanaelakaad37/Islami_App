@@ -5,7 +5,7 @@ import 'package:islami/core/app_routes/app_routes_name.dart';
 import 'package:islami/core/gen/assets.gen.dart';
 import 'package:islami/core/theme/app_colors.dart';
 
-import '../../../lib/core/services/shared_preferences.dart';
+import '../../../core/services/shared_preferences.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

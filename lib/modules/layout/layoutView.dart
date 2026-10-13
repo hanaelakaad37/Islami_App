@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/gen/assets.gen.dart';
 import 'package:islami/core/theme/app_colors.dart';
-import 'package:islami/modules/layout/quran/quran.dart';
-import 'package:islami/modules/layout/radio/radio.dart';
+import 'package:islami/modules/layout/quran/presentation/pages/quran.dart';
+import 'package:islami/modules/layout/radio/presenration/pages/radio.dart';
 import 'package:islami/modules/layout/tasbeh/tasbeh.dart';
-import 'package:islami/modules/layout/timer/timer_view.dart';
+import 'package:islami/modules/layout/timer/presentation/manager/timer_bloc.dart';
+import 'package:islami/modules/layout/timer/presentation/pages/timer_view.dart';
 
-import 'hadith/hadith.dart';
+import '../../core/di/app_di.dart';
+import 'hadith/presentation/pages/hadith.dart';
 
 class LayoutView extends StatefulWidget {
   const LayoutView({super.key});
@@ -21,7 +24,10 @@ class _LayoutViewState extends State<LayoutView> {
     Hadith(),
     Tasbeh(),
     RadioView(),
-    TimerView(),
+    BlocProvider(
+      create: (_) => getIt<TimerBloc>()..add(GetPrayTimeEvent()),
+      child: const TimerView(),
+    ),
   ];
   int _selectedIndex = 0;
 
